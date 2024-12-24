@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000
 app.use(cors())
 
 
-app.get('/', (req, response) => {
+app.get('/', (req, response) => 
     response.send(`Hello World`)
 })
 

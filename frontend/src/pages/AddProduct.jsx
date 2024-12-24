@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { schema } from "../lib/formSchema";
+import { API_KEY } from "../lib";
 
 export default function AddProduct() {
   // watch,
@@ -28,7 +29,7 @@ export default function AddProduct() {
       console.log("formValues ka object ", formValues);
 
       const response = await axios.post(
-        "https://dummyjson.com/products/add",
+        `${API_KEY}/products/add`,
         formValues,
         // { withCredentials: true }
       );

@@ -8,7 +8,7 @@ export default function ProductDetail() {
   const params = useParams();
 
   const { data, error, isLoading } = useSWR(
-    `https://dummyjson.com/products/${params.id}`,
+    `${API_KEY}/products/${params.id}`,
     axios,
   );
   const product = data?.data;
