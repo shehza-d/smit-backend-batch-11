@@ -9,8 +9,8 @@ const port = process.env.PORT || 3000
 app.use(cors())
 
 
-app.get('/', (req, response) => 
-    response.send(`Hello World`)
+app.get('/', (req, response) => {
+    response.send(`Hello World 2`)
 })
 
 app.get('/product', (request, response) => {
