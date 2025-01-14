@@ -13,7 +13,7 @@ const port = process.env.PORT || 5002;
 
 app.use(express.json()); // To convert body into JSON
 app.use(
-  cors({ origin: ["http://localhost:5173", "https://frontend.surge.sh"] }),
+  cors({ origin: ["http://localhost:5173", "https://frontend.surge.sh", 'https://marvelous-capybara-0bee09.netlify.app'] }),
 );
 
 app.get("/api/v1/todos", async (request, response) => {

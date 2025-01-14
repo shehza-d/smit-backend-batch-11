@@ -2,14 +2,22 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-export default function App() {
-  const BASE_URL = "http://localhost:5002";
+export const getUrl = () => {
+  const isHosted = window.location.href.includes("https");
 
+  const baseUrl = isHosted
+    ? "https://smit-backend-batch-11.vercel.app"
+    : "http://localhost:5002";
+  return baseUrl;
+};
+
+
+export default function App() {
   const [todos, setTodos] = useState([]);
 
   const getTodo = async () => {
     try {
-      const res = await axios(`${BASE_URL}/api/v1/todos`);
+      const res = await axios(`${getUrl()}/api/v1/todos`);
       const todosFromServer = res?.data?.data;
       console.log("todosFromServer ", todosFromServer);
 
