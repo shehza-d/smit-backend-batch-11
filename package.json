@@ -1,17 +1,22 @@
 {
-  "name": "01.hello-world",
+  "name": "03.revision",
   "version": "1.0.0",
-  "description": "kuch bhi",
-  "main": "index.mjs",
+  "type": "module",
+  "engines": {
+    "node": "20.x.x"
+  },
   "scripts": {
-    "start": "node index.mjs",
-    "dev": "node --watch index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node --watch server.js"
   },
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.4"
   }
 }

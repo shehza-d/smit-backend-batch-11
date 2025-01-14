@@ -3,14 +3,14 @@
     "name": "AI Chat-bot",
     "builds": [
         {
-            "src": "index.mjs",
+            "src": "server.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/index.mjs"
+            "dest": "/server.js"
         }
     ]
 }
